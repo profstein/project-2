@@ -39,11 +39,17 @@ html {
   font-size: 16px;
 }
 @media (min-width: 684px){
-  html {
+  :root{
+    --line-length: 35rem;
+  }
+    html {
     font-size: 18px;
   }
 }
 @media (min-width: 1375px){
+  :root{
+    --line-length: 40rem;
+  }
   html {
     font-size: 24px;
   }
@@ -280,16 +286,19 @@ Styling for individual Landmark pages
   background-color:rgba(255, 255, 255, .8);
   padding: var(--space-xs);
 }
+#pagination{
+  display: flex;
+  justify-content:space-between;
+  max-width: var(--line-length);
+  margin-inline: auto;
+  margin-top: 2rem;
+}
 
 @media (min-width:684px){
   .landmark-page .images-grid{
     grid-template-columns: repeat(2, 1fr);
   }
-  .landmark-page .intro{
 
-}
-.landmark-page .about{
-}
 }
 @media (min-width:1375px){
   .landmark-page .images-grid{
